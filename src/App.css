@@ -1,38 +1,115 @@
-.App {
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.expense-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the form */
+  width: 500px; /* Set a fixed width for the form */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.expense-form input,
+.expense-form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.expense-form button {
+  background-color: #28a745;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Make button full width */
 }
 
-.App-link {
-  color: #61dafb;
+.expense-form button:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Space between totals and the form */
+  font-size: 1.2em;
+}
+
+.total-expense {
+  color: red; 
+}
+
+.total-income {
+  color: green; 
+}
+
+
+.expense-list {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the list */
+  width: 400px; /* Set a fixed width for the list */
+}
+
+.expense-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expense-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between item and amount */
+  align-items: center; /* Center vertically */
+}
+
+.expense-list li:last-child {
+  border-bottom: none;
+}
+
+.expense-list h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+
+.net-profit {
+  margin-top: 20px;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+.profit {
+  color: green;
+  background-color: #e6f9e6;
+}
+
+
+.loss {
+  color: red;
+  background-color: #f9e6e6;
 }
